@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Card Styles */
+.card {
+    width: 90%; /* Allow flexibility */
+    max-width: 25rem; /* Keep the max width for larger screens */
+    margin: 12rem auto; /* Center the card */
+    border-radius: 10px;
+    background-color: rgb(0, 100, 210); /* For auth cards */
+}
+
+.card-body {
+    margin: 20px 0; /* Simplified margin for top and bottom */
+    padding: 2rem; /* Use padding for the content */
+    background-color: white;
+}
+
+/* Button Styles */
+.authButton, .loginButton {
+    font-size: 1.7rem; /* Adjust font size for both buttons */
+    padding: 1rem 2rem; /* Consistent padding */
+    margin-top: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.authButton:disabled,
+.loginButton:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.authButton:hover:not(:disabled),
+.loginButton:hover:not(:disabled) {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+/* Label Styles */
+.authLabel, .loginLabel {
+    margin-top: 1rem;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        margin: 5rem 1rem; /* Reduce margin for smaller screens */
+    }
+
+    .authButton, .loginButton {
+        font-size: 1.5rem; /* Adjust button font size for smaller screens */
+        padding: 0.8rem 1.5rem; /* Adjust button padding */
+    }
+}

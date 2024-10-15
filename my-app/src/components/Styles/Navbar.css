@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+.navbar {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(3px, 20px, 20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 122, 255);
+    cursor: pointer;
+    margin-left: clamp(0.5rem, -0.0282rem + 2.2535vw, 10rem);
+    margin-bottom: 10px;
+}
+
+.NavbarElements {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin-right: 40px;
+}
+
+.NavbarElements button,
+.profileIcon {
+    opacity: 1;
+    color: rgb(0, 122, 255);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.profileIcon {
+    font-size: 30px;
+    color: rgb(0, 122, 255);
+    cursor: pointer;
+}
+
+.NavbarElements button:hover,
+.profileIcon:hover {
+    color: rgb(126, 188, 255);
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    right: 0px;
+    background-color: #f9f9f9;
+    box-shadow: -6px 0px 6px 1px #0000006f;
+    height: 114vh;
+    width: min(80vw, 300px);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.profileIconSidebar{
+    margin-bottom: 8px;
+    margin-right: 7px;
+}
+
+.sidebarToggle {
+    font-size: 24px;
+    color: rgb(0, 122, 255);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.closeSidebar {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    align-self: flex-end;
+    transition-duration: 0.25s;
+    margin-bottom: 20px;
+}
+
+.profilePopup {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    z-index: 1000;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.sidebarButtons{
+    color: rgb(0, 122, 255);
+}
+
+.profileLogoutButton {
+    font-size: 1rem;
+    padding: 0.5rem 5.1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profileLogoutButton:hover {
+    background-color: rgb(126, 188, 255);
+}
+
+@media (max-width: 768px) {
+    .NavbarElements {
+        display: none;
+    }
+
+    .sidebarToggle {
+        display: block;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+
+    .sidebarToggle {
+        display: none;
+    }
+}

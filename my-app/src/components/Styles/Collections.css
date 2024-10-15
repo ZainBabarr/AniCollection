@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.collections-page {
+    max-width: 1200px; /* Keeps the maximum width for larger screens */
+    margin: 7rem auto; /* Centers the page */
+    padding: 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.new-collection-button,
+.uuid-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-collection-button:hover,
+.uuid-button:hover {
+    background-color: #0056b3;
+}
+
+.uuid-input {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Full width for smaller screens */
+    max-width: 300px; /* Max width for larger screens */
+}
+
+.collections-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts based on available space */
+    gap: 20px;
+    justify-items: center;
+}
+
+.collection-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensures the card takes full width of its grid cell */
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.collection-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.collection-description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-collection-modal {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%; /* Use a percentage for responsive design */
+    max-width: 400px; /* Limit maximum width for larger screens */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-collection-modal h3 {
+    margin-bottom: 1rem;
+}
+
+.new-collection-modal input,
+.new-collection-modal textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.create-button,
+.close-button {
+    padding: 0.75rem 1.5rem;
+    margin-top: 0.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-button{
+    margin-right: 10rem;
+}
+
+.close-button {
+    background-color: #dc3545;
+}
+
+.create-button:hover {
+    background-color: #0056b3;
+}
+
+.close-button:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .collections-page {
+        margin: 5rem 1rem; /* Reduce margins for smaller screens */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .uuid-input {
+        width: 100%; /* Full width for inputs */
+        max-width: 100%; /* Remove max width */
+    }
+
+    .new-collection-modal {
+        width: 90%; /* Full width for modal */
+        padding: 1.5rem; /* Adjust padding */
+    }
+}

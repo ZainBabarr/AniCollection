@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Ensure padding and margin are included in total width and height */
+}
+
+.anime-details {
+    padding: 1rem; /* Reduced padding for smaller screens */
+    max-width: 100%; /* Full width for small screens */
+    margin-top: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+    margin-right: clamp(1rem, -5.6901rem + 28.5446vw, 20rem);
+    margin-left: clamp(1rem, -5.6901rem + 28.5446vw, 20rem);
+    border-radius: 8px;
+    background-color: #f4f4f4; /* Main background color */
+    overflow: hidden; /* Prevent overflow for responsiveness */
+}
+
+.anime-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem; /* Adjusted padding for smaller screens */
+}
+
+.anime-content img {
+    max-width: 150px; /* Set a smaller max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-right: 1rem; /* Space between image and info */
+}
+
+.anime-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensures the info takes full width */
+}
+
+.animeTitle {
+    color: #007bff;
+    font-weight: 800;
+    font-size: 2rem; /* Reduced font size for better fit */
+    margin-bottom: 0.5rem; /* Reduced margin for better spacing */
+}
+
+.anime-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; /* Slightly reduced font size */
+    color: #000000;
+}
+
+.synopsis {
+    margin-top: 1rem; /* Reduced margin for synopsis */
+    font-size: 0.8rem; /* Smaller font size for synopsis */
+    line-height: 1.4; /* Adjust line height for better readability */
+}
+
+/* New media query to stack elements on smaller screens */
+@media (max-width: 768px) {
+    .anime-content {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .anime-content img {
+        margin-bottom: 1rem; /* Space between image and synopsis */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+.add-to-collection {
+    margin-top: 1rem; /* Adjust margin to position the button below the image */
+    display: flex; /* Ensure the button is displayed beside the image */
+    align-items: center; /* Center button vertically with the image */
+}
+
+.collectionButton {
+    font-size: 0.75rem; /* Reduced font size for the button */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 1rem; /* Space between the image and button */
+}
+
+.collectionButton:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; /* Ensure it covers the full height */
+    left: 0; /* Ensure it covers the full width */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anime-detail-modal {
+    background: #ffffff;
+    text-align: center;
+    padding: 1.5rem; /* Reduced padding for better fit */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    width: 90%; /* Responsive width */
+    max-width: 350px; /* Limit width for larger screens */
+}
+
+.anime-detail-modal h3 {
+    font-size: 1.3rem; /* Reduced heading size */
+    color: #007bff; /* Consistent blue color */
+    margin-bottom: 1rem;
+}
+
+.anime-detail-modal select {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding for smaller screens */
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Smaller font size */
+    color: #000;
+    background-color: #f4f4f4;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.modal-actions button {
+    width: 48%; /* Adjust button width */
+    padding: 0.5rem; /* Reduced padding */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 0.8rem; /* Smaller button font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal-actions button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.closeButton {
+    background-color: #ccc;
+    color: black;
+}
+
+.closeButton:hover {
+    background-color: #999; /* Darker close button color on hover */
+}
+
+.share-button {
+    margin-left: 1rem;
+    font-size: 0.75rem; /* Smaller font size for share button */
+    color: #007bff;
+}

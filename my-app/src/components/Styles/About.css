@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+.about-container {
+    height: 45rem;
+    background-color: rgb(0, 122, 255);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from 'left' to 'flex-start' */
+    width: 100%;
+    max-width: 95rem;
+    padding-bottom: 6rem;
+}
+
+.aboutTitle {
+    padding-bottom: 1rem;
+}
+
+.about-text {
+    width: 60%;
+    text-align: left;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+}
+
+.about-steps {
+    padding-top: 3.3rem;
+    width: 30%;
+    text-align: left;
+}
+
+.about-steps p {
+    font-size: clamp(1.0rem, 2vw + 0.5rem, 1.7rem); /* Responsive font size */
+    margin: 0.5rem 0;
+}
